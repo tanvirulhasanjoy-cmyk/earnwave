@@ -2,8 +2,8 @@
 // EarnWave - Frontend Application
 // ======================================
 
-// তোমার Supabase Project URL এবং Publishable Key বসাবে.
-// কখনো service_role বা secret key এখানে বসাবে না.
+// https://ajhdkptjmbanngzqtqfv.supabase.co/rest/v1/ে.
+// sb_publishable_mUbL40Gw_8sDNuVcqLhiCg_hEGlZJFt.
 const SUPABASE_URL = "PASTE_YOUR_SUPABASE_PROJECT_URL";
 const SUPABASE_PUBLISHABLE_KEY = "PASTE_YOUR_SUPABASE_PUBLISHABLE_KEY";
 
