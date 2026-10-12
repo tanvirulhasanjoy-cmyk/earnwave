@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#172554">
+  <title>EarnWave - Earn & Rewards</title>
+  <meta name="description" content="EarnWave task and rewards platform">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <span class="brand-icon">E</span>
+      <span>Earn<span class="wave">Wave</span></span>
+    </a>
+    <button class="outline-btn" id="headerLogin">Login</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-badge">✦ Welcome to EarnWave</div>
+      <h1>Welcome to <span>EarnWave</span></h1>
+      <p>Complete eligible tasks, track your rewards and manage your account in one place.</p>
+      <div class="hero-actions">
+        <button class="primary-btn" id="heroSignup">Create Account</button>
+        <button class="outline-btn" id="heroLogin">Login</button>
+      </div>
+      <div class="hero-note">
+        Rewards are subject to task verification and the published terms.
+      </div>
+    </section>
+
+    <section id="authSection" class="section hidden">
+      <div class="panel auth-panel">
+        <div class="auth-tabs">
+          <button class="tab active" id="loginTab">Login</button>
+          <button class="tab" id="signupTab">Create Account</button>
+        </div>
+
+        <form id="authForm">
+          <h2 id="authTitle">Welcome back!</h2>
+          <p class="muted" id="authDescription">Login to your EarnWave account.</p>
+
+          <div id="nameField" class="field hidden">
+            <label for="fullName">Full name</label>
+            <input id="fullName" type="text" autocomplete="name"
+              placeholder="Enter your name">
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input id="email" type="email" autocomplete="email"
+              placeholder="you@example.com" required>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" type="password" autocomplete="current-password"
+              placeholder="Enter password" minlength="8" required>
+          </div>
+
+          <button class="primary-btn full-width" type="submit" id="authSubmit">
+            Login
+          </button>
+          <p id="authMessage" class="message" role="status"></p>
+          <p class="small-note">
+            ফোন OTP ও পেমেন্ট সুবিধা চালু করতে অতিরিক্ত যাচাই ও সেটআপ প্রয়োজন।
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section hidden">
+      <div class="dashboard-heading">
+        <div>
+          <p class="muted">Your dashboard</p>
+          <h2>Welcome, <span id="userName">Member</span>!</h2>
+        </div>
+        <button id="logoutButton" class="outline-btn">Logout</button>
+      </div>
+
+      <div class="notice">
+        <strong>Account status:</strong>
+        <span id="accountStatus">Logged in</span>
+        <p>এখানে কেবল যাচাইকৃত তথ্য দেখানো হবে।</p>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card">
+          <span class="stat-icon">৳</span>
+          <p>Available balance</p>
+          <h3 id="balance">৳0.00</h3>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon">✓</span>
+          <p>Completed tasks</p>
+          <h3 id="completedTasks">0</h3>
+        </article>
+        <article class="stat-card">
+          <span class="stat-icon">★</span>
+          <p>Current level</p>
+          <h3 id="currentLevel">Level 1</h3>
+        </article>
+      </div>
+
+      <div class="section-heading">
+        <div>
+          <h2>Available tasks</h2>
+          <p class="muted">Admin-approved tasks will appear here.</p>
+        </div>
+      </div>
+
+      <div id="taskList" class="task-list">
+        <div class="empty-state">
+          <div class="empty-icon">📋</div>
+          <h3>No tasks available yet</h3>
+          <p>নিরাপদভাবে কাজ যোগ ও যাচাই করার ব্যবস্থা যুক্ত হলে এখানে কাজ দেখা যাবে।</p>
+        </div>
+      </div>
+
+      <div class="section-heading">
+        <h2>Wallet & withdrawals</h2>
+      </div>
+      <div class="panel">
+        <p>লেনদেনের ইতিহাস ও উত্তোলনের অনুরোধ এখানে যুক্ত হবে।</p>
+        <p class="muted small-note">
+          বাস্তব টাকা জমা বা উত্তোলনের আগে সার্ভার যাচাই ও পেমেন্ট ব্যবস্থা চালু করতে হবে।
+        </p>
+        <button class="outline-btn" id="walletInfoButton">View wallet information</button>
+        <p id="walletMessage" class="message" role="status"></p>
+      </div>
+    </section>
+
+    <section id="features" class="features section">
+      <div class="section-heading centered">
+        <h2>How EarnWave works</h2>
+        <p class="muted">A clear process for every member.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">👤</div>
+          <h3>Create an account</h3>
+          <p>Register and verify your account.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>Complete tasks</h3>
+          <p>Choose eligible tasks and follow their instructions.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">💳</div>
+          <h3>Track rewards</h3>
+          <p>View verified rewards and transaction history.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section terms-panel">
+      <h2>Important information</h2>
+      <p>
+        EarnWave does not guarantee earnings. Rewards depend on eligible tasks,
+        verification and available funding. Never deposit money based on a
+        guaranteed-profit promise. Deposit and withdrawal terms must be clearly
+        published before real payments are enabled.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-icon">E</span>
+      <span>Earn<span class="wave">Wave</span></span>
+    </a>
+    <p>© <span id="year"></span> EarnWave. All rights reserved.</p>
+    <p class="muted">Task and rewards platform</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
